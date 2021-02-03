@@ -1,22 +1,22 @@
 import wget
-def main():
+def main(): #Menu principal
 	print("Bienvenue dans DownloadOS\n Merci d'écrire le chiffre correspondant a votre choix\n")
 	os=["1- Windows","2- Linux","3- MacOS","4- MS-Dos","5- Quitter le programme"]
 	for i in range(len(os)):
 		print(os[i])
 	choix=int(input("Votre choix ?"))
 	if choix==1 :
-		windows()
+		windows() #Windows
 	if choix==2 :
-		linux()
+		linux() #Linux
 	if choix==3:
-		macos()
+		macos() #MacOS
 	if choix==4:
-		msdos()
+		msdos() #MS-Dos
 	if choix==5:
-		exit()
+		exit() #Bye bye
 	else:
-		main()
+		main() #C'est pas du pourtant
 
 def windows():
 	print("Quel version de windows souhaitez-vous ?")
@@ -25,7 +25,7 @@ def windows():
 		print(winver[i])
 	choix=int(input("Votre choix ?"))
 	if choix==1:
-		windows1()
+		windows1() # Widnows 1.0 -> Ok
 	if choix==2:
 		windows2()
 	if choix==3:
@@ -79,6 +79,43 @@ def windows1(): #Windows 1.0
 	wget.download(url,'Win1.03.zip')
 	print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
 	windows()
+
+def windows2(): #Windows 2.x
+	print("Choix de version")
+	ver=["1- Windows 2.03","2- Windows 2.10/286","3- Windows 2.11/286 (3.5)","4- Windows 2.11 (5.25"]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?"))
+	if choix==1:
+		url='https://www.dropbox.com/s/6ua3948mtqy0s3c/Win2.03.zip?dl=1'
+		nomfichier='Win2.03.zip'
+		print("Démarrage du téléchargement")
+		wget.download(url,nomfichier)
+		print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+		windows()
+	if choix==2:
+		url='https://www.dropbox.com/s/tml2c2taehan7gd/Win_2.10_286.zip?dl=1'
+		nomfichier='Win_2.10_286.zip'
+		print("Démarrage du téléchargement")
+		wget.download(url,nomfichier)
+		print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+		windows()
+	if choix==3:
+		url='https://www.dropbox.com/s/vg1of0pjgu1mhds/Win_2.11_286_35.zip?dl=1'
+		nomfichier='Win_2.11_286_35.zip'
+		print("Démarrage du téléchargement")
+		wget.download(url,nomfichier)
+		print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+		windows()
+	if choix==4:
+		url='https://www.dropbox.com/s/kap5fg79lsa01w2/Win2.11_286_525.zip?dl=1'
+		nomfichier='Win2.11_286_525.zip'
+		print("Démarrage du téléchargement")
+		wget.download(url,nomfichier)
+		print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+		windows()
+	else:
+		windows2()
 
 def template(): #Template quand il n'y a que 1 fichier
 	print("Démarrage du téléchargement")

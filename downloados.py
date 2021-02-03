@@ -56,17 +56,29 @@ def windows():
 		windows8()
 	if choix==16:
 		windowssrv2k12()
-	if choix==18:
+	if choix==17:
 		windows81()
-	if choix==19:
+	if choix==18:
 		windowssrv2k12r2()
-	if choix==20
+	if choix==19:
+		windows10()
+	if choix==20:
+		windowssrv2k16()
+	if choix==21:
+		windowssrv2k19()
+	if choix==22:
+		main()
+	if choix==23:
+		exit()
+	else:
+		windows()
 
 def windows1(): #Windows 1.0
 	print("Démarrage du téléchargement")
 	url='https://www.dropbox.com/s/9wkr5lrgvjqmupb/Win1.03.zip?dl=1'
 	wget.download(url,'Win1.03.zip')
 	print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+	windows()
 
 def template(): #Template quand il n'y a que 1 fichier
 	print("Démarrage du téléchargement")

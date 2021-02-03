@@ -29,11 +29,10 @@ def windows1():
 	print("Démarrage du téléchargement")
 	url='https://www.dropbox.com/s/9wkr5lrgvjqmupb/Win1.03.zip?dl=1'
 	wget.download(url,'Win1.03.zip')
-	print("téléchargement terminé, merci de retirer le ?dl=1 & la fin du fichier afin d'avoir un fichier fonctionnel")
-
+	print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
 def template():
 	print("Démarrage du téléchargement")
 	url=''
 	wget.download(url,'filename')
-	print("téléchargement terminé, merci de retirer le ?dl=1 & la fin du fichier afin d'avoir un fichier fonctionnel")
+	print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
 main()

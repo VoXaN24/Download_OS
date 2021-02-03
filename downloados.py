@@ -15,3 +15,7 @@ def main():
 		msdos()
 	else:
 		main()
+
+def windows():
+	print("Quel version de windows souhaitez-vous ?")
+	winver=["1- Windows 1.0","2- Windows 2.x","3- Windows 3.x","4- Windows 95","5- Windows 98","6- Windows 2000"]

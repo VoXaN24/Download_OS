@@ -97,6 +97,32 @@ def windows2(): #Windows 2.x
 		windows()
 	else:
 		windows2()
+def windows3(): #Windows 3.x
+	print("Choix de version")
+	ver=["1- Windows 3.0a","2- Windows 3.1 (3.5)","3- Windows 3.1 (5.25)","4- Windows 3.1 for Workstation","5- Windows 3.11","6- Windows 3.11 for Workstation"]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?"))
+	if choix==1:
+		dl('https://www.dropbox.com/s/jzv4uo24m1ca6qd/Win3.0a.zip?dl=1','Win3.0a.zip')
+		windows()
+	if choix==2:
+		dl('https://www.dropbox.com/s/jy56hfp5gwgw6ht/Win3.1_35.zip?dl=1','Win3.1_35.zip')
+		windows
+	if choix==3:
+		dl('https://www.dropbox.com/s/ai11n4x7drz9gj0/Win3.1_525.zip?dl=1','Win3.1_525.zip')
+		windows()
+	if choix==4:
+		dl('https://www.dropbox.com/s/x9rsag2zp05rjwi/Win3.1_workstation.zip?dl=1','Win3.1_workstation.zip')
+		windows()
+	if choix==5:
+		dl('https://www.dropbox.com/s/b2wjra9yse8qrcz/Win3.11.zip?dl=1','Win3.11.zip')
+		windows()
+	if choix==6:
+		dl('https://www.dropbox.com/s/xqys6qbksvxsy2e/Win3.11_workstation.zip?dl=1','Win3.11_workstation.zip')
+		windows()
+	else:
+		windows3()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

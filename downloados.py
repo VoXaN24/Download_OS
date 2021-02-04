@@ -37,9 +37,9 @@ def windows():
 	if choix==6:
 		windows2k() #Windows 2000 -> Ok
 	if choix==7:
-		windowsnt3() #Windows NT 3.x
+		windowsnt3() #Windows NT 3.x -> OK
 	if choix==8:
-		windowsnt4()
+		windowsnt4() #Windows NT 4.x -> OK
 	if choix==9:
 		windowsme() # Windows ME -> Ok
 	if choix==10:
@@ -173,6 +173,19 @@ def windowsnt3(): #Windows NT 3.x
 		windows()
 	else:
 		windowsnt3()
+
+def windowsnt4(): #Windows NT4.0
+	ver=["1- Windows NT 4.0 Serveur",'2- Windows NT 4.0 Serveur Back Office 2.5',"3- Windows NT 4.0 Serveur Entreprise Edition","4- Windows NT 4.0 Terminal Serveur","5- Windows NT 4.0 Workstation"]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url[0,'https://www.dropbox.com/s/8udbpydfanv43i0/WinNT4.0Serv.zip?dl=1','https://www.dropbox.com/s/frj3ei5lvimbn5b/WinNT4.0Serv_Back_Office_2.5.zip?dl=1','https://www.dropbox.com/s/1hpx3jeas42lpl1/WinNT4.0Serv_Entreprise_Edition.zip?dl=1','https://www.dropbox.com/s/llqt5s41xgsrkz8/WinNT4.0Term_Serv.zip?dl=1','https://www.dropbox.com/s/un6xnf3niy3hocx/WinNT4.0Work.zip?dl=1']
+	name[0,'WinNT4.0Serv.zip','WinNT4.0Serv_Back_Office_2.5.zip','WinNT4.0Serv_Entreprise_Edition.zip','WinNT4.0Term_Serv.zip','WinNT4.0Work.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		windowsnt4()
 
 
 def dl(url,filename):

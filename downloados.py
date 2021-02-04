@@ -35,7 +35,7 @@ def windows():
 	if choix==5:
 		windows98() #Windows 98 -> Ok
 	if choix==6:
-		windows2k()
+		windows2k() #Windows 2000 -> Ok
 	if choix==7:
 		windowsnt3()
 	if choix==8:
@@ -147,6 +147,19 @@ def windows98(): # Windows 98
 		windows()
 	else :
 		windows98()
+
+def windows2k():
+	ver=["1- Windows 2000 Professionel","2- Windows 2000 Server","3- Windows 2000 Professionel (Microsoft Select)"]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url[0,'https://www.dropbox.com/s/1vhjaalcnyv7puy/Win2kPro.zip?dl=1','https://www.dropbox.com/s/zblg08ouixo2ccx/Win2kServeur.zip?dl=1','https://www.dropbox.com/s/gc22xuue1ia682w/Win2kPro_MS_Select.zip?dl=1']
+	name[0,'Win2kPro.zip','Win2kServeur.zip','Win2kPro_MS_Select.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		windows2k()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

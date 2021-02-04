@@ -170,9 +170,9 @@ def windowsnt3(): #Windows NT 3.x
 	name[0,'WinNT3.1Work.zip','WinNT3.1WorkFloppy','WinNT3.5.zip','WinNT3.5ServFloppy.zip','WinNT3.51Serv.zip','WinNT3.51ServFloppy.zip','WinNT3.51Work.zip','WinNT3.51WorkFloppy.zip']
 	if choix <= len(ver) - 1 and choix != 0:
 		dl(url[choix], name[choix])
-		var()
+		windows()
 	else:
-		precedentvar()
+		windowsnt3()
 
 
 def dl(url,filename):

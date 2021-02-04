@@ -4,7 +4,7 @@ def main(): #Menu principal
 	os=["1- Windows","2- Linux","3- MacOS","4- MS-Dos","5- Quitter le programme"]
 	for i in range(len(os)):
 		print(os[i])
-	choix=int(input("Votre choix ?"))
+	choix=int(input("Votre choix ?\n"))
 	if choix==1 :
 		windows() #Windows
 	if choix==2 :
@@ -83,18 +83,10 @@ def windows2(): #Windows 2.x
 	for i in range(len(ver)):
 		print(ver[i])
 	choix=int(input("Votre choix ?"))
-	if choix==1:
-		dl('https://www.dropbox.com/s/6ua3948mtqy0s3c/Win2.03.zip?dl=1','Win2.03.zip')
-		windows()
-	if choix==2:
-		dl('https://www.dropbox.com/s/tml2c2taehan7gd/Win_2.10_286.zip?dl=1','Win_2.10_286.zip')
-		windows()
-	if choix==3:
-		dl('https://www.dropbox.com/s/vg1of0pjgu1mhds/Win_2.11_286_35.zip?dl=1','Win_2.11_286_35.zip')
-		windows()
-	if choix==4:
-		dl('https://www.dropbox.com/s/kap5fg79lsa01w2/Win2.11_286_525.zip?dl=1','Win2.11_286_525.zip')
-		windows()
+	url=[0,'https://www.dropbox.com/s/6ua3948mtqy0s3c/Win2.03.zip?dl=1','https://www.dropbox.com/s/tml2c2taehan7gd/Win_2.10_286.zip?dl=1','https://www.dropbox.com/s/vg1of0pjgu1mhds/Win_2.11_286_35.zip?dl=1','https://www.dropbox.com/s/kap5fg79lsa01w2/Win2.11_286_525.zip?dl=1']
+	name=[0,'Win2.03.zip','Win_2.10_286.zip','Win_2.11_286_35.zip','Win2.11_286_525.zip']
+	if choix <= len(ver)-1 and choix != 0:
+		dl(url[choix],name[choix])
 	else:
 		windows2()
 def windows3(): #Windows 3.x
@@ -103,24 +95,10 @@ def windows3(): #Windows 3.x
 	for i in range(len(ver)):
 		print(ver[i])
 	choix=int(input("Votre choix ?"))
-	if choix==1:
-		dl('https://www.dropbox.com/s/jzv4uo24m1ca6qd/Win3.0a.zip?dl=1','Win3.0a.zip')
-		windows()
-	if choix==2:
-		dl('https://www.dropbox.com/s/jy56hfp5gwgw6ht/Win3.1_35.zip?dl=1','Win3.1_35.zip')
-		windows
-	if choix==3:
-		dl('https://www.dropbox.com/s/ai11n4x7drz9gj0/Win3.1_525.zip?dl=1','Win3.1_525.zip')
-		windows()
-	if choix==4:
-		dl('https://www.dropbox.com/s/x9rsag2zp05rjwi/Win3.1_workstation.zip?dl=1','Win3.1_workstation.zip')
-		windows()
-	if choix==5:
-		dl('https://www.dropbox.com/s/b2wjra9yse8qrcz/Win3.11.zip?dl=1','Win3.11.zip')
-		windows()
-	if choix==6:
-		dl('https://www.dropbox.com/s/xqys6qbksvxsy2e/Win3.11_workstation.zip?dl=1','Win3.11_workstation.zip')
-		windows()
+	url=[0,'https://www.dropbox.com/s/jzv4uo24m1ca6qd/Win3.0a.zip?dl=1','https://www.dropbox.com/s/jy56hfp5gwgw6ht/Win3.1_35.zip?dl=1','https://www.dropbox.com/s/ai11n4x7drz9gj0/Win3.1_525.zip?dl=1','https://www.dropbox.com/s/x9rsag2zp05rjwi/Win3.1_workstation.zip?dl=1','https://www.dropbox.com/s/b2wjra9yse8qrcz/Win3.11.zip?dl=1','https://www.dropbox.com/s/xqys6qbksvxsy2e/Win3.11_workstation.zip?dl=1']
+	name=[0,'Win3.0a.zip','Win3.1_35.zip','Win3.1_525.zip','Win3.1_workstation.zip','Win3.11.zip','Win3.11_workstation.zip']
+	if choix <= len(ver)-1 and choix != 0:
+		dl(url[choix],name[choix])
 	else:
 		windows3()
 def windows95(): #Windows 95
@@ -167,8 +145,20 @@ def windows81(): #Windows 8.1
 		dl('https://www.dropbox.com/s/5kzqj5m3fkzrmjb/Win8.1_x64.zip?dl=1','Win8.1_x64.zip')
 		windows()
 
+def windows98():
+	ver=["1- Windows 98 (Disquette de démarrage)","2- Windows 98 FE","3- Windows 98 FE (Disquette)","4- Windows 98 FE vers SE","5- Windows 98 SE","6- Windows 98 SE (Microsoft Select)"]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?"))
+	if choix==1:
+		dl('https://www.dropbox.com/s/9dz2bmu5g7rjnx4/BootFloppyWin98.zip?dl=1','BootFloppyWin98.zip')
+		windows()
+	if choix==2:
+		dl('')
+
 def dl(url,filename):
 	print("Démarrage du téléchargement")
 	wget.download(url,filename)
 	print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+
 main()

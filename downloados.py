@@ -23,7 +23,7 @@ def windows():
 	winver=["1- Windows 1.0","2- Windows 2.x","3- Windows 3.x","4- Windows 95","5- Windows 98","6- Windows 2000","7- Windows NT 3.x","8- Windows NT 4.0","9- Windows ME","10- Windows XP","11- Windows Serveur 2003","12- Windows Vista","13- Windows 7","14- Windows Serveur 2008","15- Windows 8","16- Windows Server 2012","17- Windows 8.1","18- Windows Serveur 2012 R2","19- Windows 10","20- Windows Serveur 2016","21- Windows Serveur 2019","22- Retourner au menu principal","23- Quitter le programme"]
 	for i in range(len(winver)):
 		print(winver[i])
-	choix=int(input("Votre choix ?"))
+	choix=int(input("Votre choix ?\n"))
 	if choix==1:
 		windows1() # Widnows 1.0 -> Ok
 	if choix==2:
@@ -78,7 +78,7 @@ def windows1(): #Windows 1.0
 	windows()
 
 def windows2(): #Windows 2.x
-	print("Choix de version")
+	print("Choix de version\n")
 	ver=["1- Windows 2.03","2- Windows 2.10/286","3- Windows 2.11/286 (3.5)","4- Windows 2.11 (5.25"]
 	for i in range(len(ver)):
 		print(ver[i])
@@ -98,7 +98,7 @@ def windows2(): #Windows 2.x
 	else:
 		windows2()
 def windows3(): #Windows 3.x
-	print("Choix de version")
+	print("Choix de version\n")
 	ver=["1- Windows 3.0a","2- Windows 3.1 (3.5)","3- Windows 3.1 (5.25)","4- Windows 3.1 for Workstation","5- Windows 3.11","6- Windows 3.11 for Workstation"]
 	for i in range(len(ver)):
 		print(ver[i])
@@ -124,7 +124,7 @@ def windows3(): #Windows 3.x
 	else:
 		windows3()
 def windows95(): #Windows 95
-	print("Choix de version")
+	print("Choix de version\n")
 	ver=["1- Windows 95 RTM (Disquette)","2- Windows 95 RTM","3- Windows 95 OSR 1","4- Windows 95 OSR 2","5- Windows 95 OSR 2.1","6- Windows 95 OSR 2.5"]
 	for i in range(len(ver)):
 		print(ver[i])

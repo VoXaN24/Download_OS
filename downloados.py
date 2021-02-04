@@ -74,10 +74,7 @@ def windows():
 		windows()
 
 def windows1(): #Windows 1.0
-	print("Démarrage du téléchargement")
-	url='https://www.dropbox.com/s/9wkr5lrgvjqmupb/Win1.03.zip?dl=1'
-	wget.download(url,'Win1.03.zip')
-	print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+	dl('https://www.dropbox.com/s/9wkr5lrgvjqmupb/Win1.03.zip?dl=1','Win1.03.zip')
 	windows()
 
 def windows2(): #Windows 2.x
@@ -87,39 +84,22 @@ def windows2(): #Windows 2.x
 		print(ver[i])
 	choix=int(input("Votre choix ?"))
 	if choix==1:
-		url='https://www.dropbox.com/s/6ua3948mtqy0s3c/Win2.03.zip?dl=1'
-		nomfichier='Win2.03.zip'
-		print("Démarrage du téléchargement")
-		wget.download(url,nomfichier)
-		print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+		dl('https://www.dropbox.com/s/6ua3948mtqy0s3c/Win2.03.zip?dl=1','Win2.03.zip')
 		windows()
 	if choix==2:
-		url='https://www.dropbox.com/s/tml2c2taehan7gd/Win_2.10_286.zip?dl=1'
-		nomfichier='Win_2.10_286.zip'
-		print("Démarrage du téléchargement")
-		wget.download(url,nomfichier)
-		print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+		dl('https://www.dropbox.com/s/tml2c2taehan7gd/Win_2.10_286.zip?dl=1','Win_2.10_286.zip')
 		windows()
 	if choix==3:
-		url='https://www.dropbox.com/s/vg1of0pjgu1mhds/Win_2.11_286_35.zip?dl=1'
-		nomfichier='Win_2.11_286_35.zip'
-		print("Démarrage du téléchargement")
-		wget.download(url,nomfichier)
-		print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+		dl('https://www.dropbox.com/s/vg1of0pjgu1mhds/Win_2.11_286_35.zip?dl=1','Win_2.11_286_35.zip')
 		windows()
 	if choix==4:
-		url='https://www.dropbox.com/s/kap5fg79lsa01w2/Win2.11_286_525.zip?dl=1'
-		nomfichier='Win2.11_286_525.zip'
-		print("Démarrage du téléchargement")
-		wget.download(url,nomfichier)
-		print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+		dl('https://www.dropbox.com/s/kap5fg79lsa01w2/Win2.11_286_525.zip?dl=1','Win2.11_286_525.zip')
 		windows()
 	else:
 		windows2()
 
-def template(): #Template quand il n'y a que 1 fichier
+def dl(url,filename):
 	print("Démarrage du téléchargement")
-	url=''
-	wget.download(url,'filename')
+	wget.download(url,filename)
 	print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
 main()

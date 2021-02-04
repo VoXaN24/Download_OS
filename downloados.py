@@ -41,7 +41,7 @@ def windows():
 	if choix==8:
 		windowsnt4()
 	if choix==9:
-		windowsme()
+		windowsme() # Windows ME -> Ok
 	if choix==10:
 		windowsxp()
 	if choix==11:
@@ -149,6 +149,10 @@ def windows95(): #Windows 95
 		windows()
 	else:
 		windows95()
+
+def windowsme():
+	dl('https://www.dropbox.com/s/72es4jknmljyjql/WinMe.zip?dl=1','WinMe.zip')
+	windows()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

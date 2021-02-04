@@ -87,6 +87,7 @@ def windows2(): #Windows 2.x
 	name=[0,'Win2.03.zip','Win_2.10_286.zip','Win_2.11_286_35.zip','Win2.11_286_525.zip']
 	if choix <= len(ver)-1 and choix != 0:
 		dl(url[choix],name[choix])
+		windows()
 	else:
 		windows2()
 def windows3(): #Windows 3.x
@@ -99,6 +100,7 @@ def windows3(): #Windows 3.x
 	name=[0,'Win3.0a.zip','Win3.1_35.zip','Win3.1_525.zip','Win3.1_workstation.zip','Win3.11.zip','Win3.11_workstation.zip']
 	if choix <= len(ver)-1 and choix != 0:
 		dl(url[choix],name[choix])
+		windows()
 	else:
 		windows3()
 def windows95(): #Windows 95
@@ -107,23 +109,10 @@ def windows95(): #Windows 95
 	for i in range(len(ver)):
 		print(ver[i])
 	choix=int(input("Votre choix ?"))
-	if choix==1:
-		dl('https://www.dropbox.com/s/vlcxi2uuqr84331/Win95Floppy.zip?dl=1','Win95Floppy.zip')
-		windows()
-	if choix==2:
-		dl('https://www.dropbox.com/s/xue2u98suw3osgd/Win95.zip?dl=1','Win95.zip')
-		windows
-	if choix==3:
-		dl('https://www.dropbox.com/s/i59js5htmq64oy8/Win95OSR1.zip?dl=1','Win95OSR1.zip')
-		windows()
-	if choix==4:
-		dl('https://www.dropbox.com/s/1hru7q9uemt814q/Win95OSR2.zip?dl=1','Win95OSR2.zip')
-		windows()
-	if choix==5:
-		dl('https://www.dropbox.com/s/w73w3rftftogld9/Win95OSR2.1.zip?dl=1','Win95OSR2.1.zip')
-		windows()
-	if choix==6:
-		dl('https://www.dropbox.com/s/lzueklsi923yn19/Win95OSR2.5.zip?dl=1','Win95OSR2.5.zip')
+	url=[0,'https://www.dropbox.com/s/vlcxi2uuqr84331/Win95Floppy.zip?dl=1','https://www.dropbox.com/s/xue2u98suw3osgd/Win95.zip?dl=1','https://www.dropbox.com/s/i59js5htmq64oy8/Win95OSR1.zip?dl=1','https://www.dropbox.com/s/1hru7q9uemt814q/Win95OSR2.zip?dl=1','https://www.dropbox.com/s/w73w3rftftogld9/Win95OSR2.1.zip?dl=1','https://www.dropbox.com/s/lzueklsi923yn19/Win95OSR2.5.zip?dl=1']
+	name=[0,'Win95Floppy.zip','Win95.zip','Win95OSR1.zip','Win95OSR2.zip','Win95OSR2.1.zip','Win95OSR2.5.zip']
+	if choix <= len(ver)-1 and choix != 0:
+		dl(url[choix],name[choix])
 		windows()
 	else:
 		windows95()

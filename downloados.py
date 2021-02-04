@@ -202,6 +202,8 @@ def winxphome():
 	ver=["1- Windows XP Home N","2- Windows XP Home N SP2","3- Windows XP Home N SP3","4- Windows XP Home RTM","5- Windows XP Home SP1","6- Windows XP Home SP2","7- Windows XP Home SP3"]
 	url=[0,'https://www.dropbox.com/s/9a79i6rzb8yw2t3/WinXP_Home_N_SP0.zip?dl=1','https://www.dropbox.com/s/uubff062srqr7up/WinXP_Home_N_SP2.zip?dl=1','https://www.dropbox.com/s/r3loerq4odvuz9t/WinXP_Home_N_SP3.zip?dl=1','https://www.dropbox.com/s/739amnqspx9a3gd/WinXP_Home_SP0.zip?dl=1','https://www.dropbox.com/s/9qxc4etvva6cnpn/WinXP_Home_SP1.zip?dl=1','https://www.dropbox.com/s/gmq6ltwn1t4q674/WinXP_Home_SP2.zip?dl=1','https://www.dropbox.com/s/pk3fr6hduxn8g8t/WinXP_Home_SP3.zip?dl=1']
 	name=[0,'WinXP_Home_N_SP0.zip','WinXP_Home_N_SP2.zip','WinXP_Home_N_SP3.zip','WinXP_Home_SP0.zip','WinXP_Home_SP1.zip','WinXP_Home_SP2.zip','WinXP_Home_SP3.zip']
+	for i in range(len(ver)):
+		print(ver[i])
 	choix=int(input("Votre choix ?\n"))
 	if choix <= len(ver) - 1 and choix != 0:
 		dl(url[choix], name[choix])

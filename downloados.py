@@ -33,7 +33,7 @@ def windows():
 	if choix==4:
 		windows95() # Windows 95 -> Ok
 	if choix==5:
-		windows98()
+		windows98() #Windows 98 -> Ok
 	if choix==6:
 		windows2k()
 	if choix==7:
@@ -127,23 +127,26 @@ def windows81(): #Windows 8.1
 	for i in range(len(ver)):
 		print(ver[i])
 	choix=int(input("Votre choix ?"))
-	if choix==1:
-		dl('https://www.dropbox.com/s/8q9af9u9gm6qd5h/Win8.1_x86.zip?dl=1','Win8.1_x86.zip')
+	url=[0,'https://www.dropbox.com/s/8q9af9u9gm6qd5h/Win8.1_x86.zip?dl=1','https://www.dropbox.com/s/5kzqj5m3fkzrmjb/Win8.1_x64.zip?dl=1']
+	name=[0,'Win8.1_x86.zip','Win8.1_x64.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
 		windows()
-	if choix==2:
-		dl('https://www.dropbox.com/s/5kzqj5m3fkzrmjb/Win8.1_x64.zip?dl=1','Win8.1_x64.zip')
-		windows()
+	else:
+		windows81()
 
-def windows98():
+def windows98(): # Windows 98
 	ver=["1- Windows 98 (Disquette de démarrage)","2- Windows 98 FE","3- Windows 98 FE (Disquette)","4- Windows 98 FE vers SE","5- Windows 98 SE","6- Windows 98 SE (Microsoft Select)"]
 	for i in range(len(ver)):
 		print(ver[i])
 	choix=int(input("Votre choix ?"))
-	if choix==1:
-		dl('https://www.dropbox.com/s/9dz2bmu5g7rjnx4/BootFloppyWin98.zip?dl=1','BootFloppyWin98.zip')
+	url=[0,'https://www.dropbox.com/s/9dz2bmu5g7rjnx4/BootFloppyWin98.zip?dl=1','https://www.dropbox.com/s/oadmdoeh2sbihv8/Win98FE.zip?dl=1','https://www.dropbox.com/s/35weam9voxcqcy5/Win98_Floppy.zip?dl=1','https://www.dropbox.com/s/ps3znujq8vf6u6x/Win98FEtoSE.zip?dl=1','https://www.dropbox.com/s/qgtfkp6bhq2sx5i/Win98SE.zip?dl=1','https://www.dropbox.com/s/w7e94wc5fac6nk2/Win98SE_MS_Select.zip?dl=1']
+	name=[0,'BootFloppyWin98.zip','Win98FE.zip','Win98_Floppy.zip','Win98FEtoSE.zip','Win98SE.zip','Win98SE_MS_Select.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
 		windows()
-	if choix==2:
-		dl('')
+	else :
+		windows98()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

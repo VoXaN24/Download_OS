@@ -57,7 +57,7 @@ def windows():
 	if choix==16:
 		windowssrv2k12()
 	if choix==17:
-		windows81()
+		windows81() #Windows 8.1 -> Ok
 	if choix==18:
 		windowssrv2k12r2()
 	if choix==19:
@@ -150,9 +150,22 @@ def windows95(): #Windows 95
 	else:
 		windows95()
 
-def windowsme():
+def windowsme(): #Windows ME
 	dl('https://www.dropbox.com/s/72es4jknmljyjql/WinMe.zip?dl=1','WinMe.zip')
 	windows()
+
+def windows81(): #Windows 8.1
+	print("Choix de version\n")
+	ver=["1- Windows 8.1 32 Bits","2- Windows 8.1 64 Bits"]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?"))
+	if choix==1:
+		dl('https://www.dropbox.com/s/8q9af9u9gm6qd5h/Win8.1_x86.zip?dl=1','Win8.1_x86.zip')
+		windows()
+	if choix==2:
+		dl('https://www.dropbox.com/s/5kzqj5m3fkzrmjb/Win8.1_x64.zip?dl=1','Win8.1_x64.zip')
+		windows()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

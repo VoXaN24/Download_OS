@@ -16,7 +16,7 @@ def main(): #Menu principal
 	if choix==5:
 		exit() #Bye bye
 	else:
-		main() #C'est pas du pourtant
+		main() #C'est pas dur pourtant
 
 def windows():
 	print("Quel version de windows souhaitez-vous ?")
@@ -27,7 +27,7 @@ def windows():
 	if choix==1:
 		windows1() # Widnows 1.0 -> Ok
 	if choix==2:
-		windows2()
+		windows2() # Windows 2.x -> Ok
 	if choix==3:
 		windows3()
 	if choix==4:

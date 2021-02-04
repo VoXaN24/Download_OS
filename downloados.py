@@ -82,7 +82,7 @@ def windows2(): #Windows 2.x
 	ver=["1- Windows 2.03","2- Windows 2.10/286","3- Windows 2.11/286 (3.5)","4- Windows 2.11 (5.25"]
 	for i in range(len(ver)):
 		print(ver[i])
-	choix=int(input("Votre choix ?"))
+	choix=int(input("Votre choix ?\n"))
 	url=[0,'https://www.dropbox.com/s/6ua3948mtqy0s3c/Win2.03.zip?dl=1','https://www.dropbox.com/s/tml2c2taehan7gd/Win_2.10_286.zip?dl=1','https://www.dropbox.com/s/vg1of0pjgu1mhds/Win_2.11_286_35.zip?dl=1','https://www.dropbox.com/s/kap5fg79lsa01w2/Win2.11_286_525.zip?dl=1']
 	name=[0,'Win2.03.zip','Win_2.10_286.zip','Win_2.11_286_35.zip','Win2.11_286_525.zip']
 	if choix <= len(ver)-1 and choix != 0:
@@ -95,7 +95,7 @@ def windows3(): #Windows 3.x
 	ver=["1- Windows 3.0a","2- Windows 3.1 (3.5)","3- Windows 3.1 (5.25)","4- Windows 3.1 for Workstation","5- Windows 3.11","6- Windows 3.11 for Workstation"]
 	for i in range(len(ver)):
 		print(ver[i])
-	choix=int(input("Votre choix ?"))
+	choix=int(input("Votre choix ?\n"))
 	url=[0,'https://www.dropbox.com/s/jzv4uo24m1ca6qd/Win3.0a.zip?dl=1','https://www.dropbox.com/s/jy56hfp5gwgw6ht/Win3.1_35.zip?dl=1','https://www.dropbox.com/s/ai11n4x7drz9gj0/Win3.1_525.zip?dl=1','https://www.dropbox.com/s/x9rsag2zp05rjwi/Win3.1_workstation.zip?dl=1','https://www.dropbox.com/s/b2wjra9yse8qrcz/Win3.11.zip?dl=1','https://www.dropbox.com/s/xqys6qbksvxsy2e/Win3.11_workstation.zip?dl=1']
 	name=[0,'Win3.0a.zip','Win3.1_35.zip','Win3.1_525.zip','Win3.1_workstation.zip','Win3.11.zip','Win3.11_workstation.zip']
 	if choix <= len(ver)-1 and choix != 0:
@@ -108,7 +108,7 @@ def windows95(): #Windows 95
 	ver=["1- Windows 95 RTM (Disquette)","2- Windows 95 RTM","3- Windows 95 OSR 1","4- Windows 95 OSR 2","5- Windows 95 OSR 2.1","6- Windows 95 OSR 2.5"]
 	for i in range(len(ver)):
 		print(ver[i])
-	choix=int(input("Votre choix ?"))
+	choix=int(input("Votre choix ?\n"))
 	url=[0,'https://www.dropbox.com/s/vlcxi2uuqr84331/Win95Floppy.zip?dl=1','https://www.dropbox.com/s/xue2u98suw3osgd/Win95.zip?dl=1','https://www.dropbox.com/s/i59js5htmq64oy8/Win95OSR1.zip?dl=1','https://www.dropbox.com/s/1hru7q9uemt814q/Win95OSR2.zip?dl=1','https://www.dropbox.com/s/w73w3rftftogld9/Win95OSR2.1.zip?dl=1','https://www.dropbox.com/s/lzueklsi923yn19/Win95OSR2.5.zip?dl=1']
 	name=[0,'Win95Floppy.zip','Win95.zip','Win95OSR1.zip','Win95OSR2.zip','Win95OSR2.1.zip','Win95OSR2.5.zip']
 	if choix <= len(ver)-1 and choix != 0:
@@ -126,7 +126,7 @@ def windows81(): #Windows 8.1
 	ver=["1- Windows 8.1 32 Bits","2- Windows 8.1 64 Bits"]
 	for i in range(len(ver)):
 		print(ver[i])
-	choix=int(input("Votre choix ?"))
+	choix=int(input("Votre choix ?\n"))
 	url=[0,'https://www.dropbox.com/s/8q9af9u9gm6qd5h/Win8.1_x86.zip?dl=1','https://www.dropbox.com/s/5kzqj5m3fkzrmjb/Win8.1_x64.zip?dl=1']
 	name=[0,'Win8.1_x86.zip','Win8.1_x64.zip']
 	if choix <= len(ver) - 1 and choix != 0:
@@ -139,7 +139,7 @@ def windows98(): # Windows 98
 	ver=["1- Windows 98 (Disquette de démarrage)","2- Windows 98 FE","3- Windows 98 FE (Disquette)","4- Windows 98 FE vers SE","5- Windows 98 SE","6- Windows 98 SE (Microsoft Select)"]
 	for i in range(len(ver)):
 		print(ver[i])
-	choix=int(input("Votre choix ?"))
+	choix=int(input("Votre choix ?\n"))
 	url=[0,'https://www.dropbox.com/s/9dz2bmu5g7rjnx4/BootFloppyWin98.zip?dl=1','https://www.dropbox.com/s/oadmdoeh2sbihv8/Win98FE.zip?dl=1','https://www.dropbox.com/s/35weam9voxcqcy5/Win98_Floppy.zip?dl=1','https://www.dropbox.com/s/ps3znujq8vf6u6x/Win98FEtoSE.zip?dl=1','https://www.dropbox.com/s/qgtfkp6bhq2sx5i/Win98SE.zip?dl=1','https://www.dropbox.com/s/w7e94wc5fac6nk2/Win98SE_MS_Select.zip?dl=1']
 	name=[0,'BootFloppyWin98.zip','Win98FE.zip','Win98_Floppy.zip','Win98FEtoSE.zip','Win98SE.zip','Win98SE_MS_Select.zip']
 	if choix <= len(ver) - 1 and choix != 0:
@@ -152,5 +152,18 @@ def dl(url,filename):
 	print("Démarrage du téléchargement")
 	wget.download(url,filename)
 	print("Téléchargement terminé, le fichier se trouve dans le même dossier que le script")
+
+def template():
+	ver=[]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url[0,1]
+	name[0,1]
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		var()
+	else:
+		precedentvar()
 
 main()

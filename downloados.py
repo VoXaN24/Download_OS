@@ -37,7 +37,7 @@ def windows():
 	if choix==6:
 		windows2k() #Windows 2000 -> Ok
 	if choix==7:
-		windowsnt3()
+		windowsnt3() #Windows NT 3.x
 	if choix==8:
 		windowsnt4()
 	if choix==9:
@@ -148,7 +148,7 @@ def windows98(): # Windows 98
 	else :
 		windows98()
 
-def windows2k():
+def windows2k(): # Windows 2000
 	ver=["1- Windows 2000 Professionel","2- Windows 2000 Server","3- Windows 2000 Professionel (Microsoft Select)"]
 	for i in range(len(ver)):
 		print(ver[i])
@@ -160,6 +160,20 @@ def windows2k():
 		windows()
 	else:
 		windows2k()
+
+def windowsnt3(): #Windows NT 3.x
+	ver=["1- Windows NT 3.1 Workstation","2- Windows NT 3.1 Workstation (Disquettes)","3- Windows NT 3.5 Workstation","4- Windows NT 3.5 Serveur (Disquette)","5- Windows NT 3.51 Serveur","6- Windows NT 3.51 Serveur (Disquette)","7- Windows NT 3.51 Workstation","8- Windows NT 3.51 Workstation (Disquette)"]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url[0,'https://www.dropbox.com/s/vb1k1pd5a4gx6vf/WinNT3.1Work.zip?dl=1','https://www.dropbox.com/s/7vfmu94y1yuj7fo/WinNT3.1WorkFloppy.zip?dl=1','https://www.dropbox.com/s/jf3ojlfdxbmnnek/WinNT3.5.zip?dl=1','https://www.dropbox.com/s/s0l1x9dovmmz2wo/WinNT3.5ServFloppy.zip?dl=1','https://www.dropbox.com/s/ans6hrk3uywe0ir/WinNT3.51Serv.zip?dl=1','https://www.dropbox.com/s/easj1oi5o30yfhi/WinNT3.51ServFloppy.zip?dl=1','https://www.dropbox.com/s/rszna9hi1akoffj/WinNT3.51Work.zip?dl=1','https://www.dropbox.com/s/opmb41eitn40a4d/WinNT3.51WorkFloppy.zip?dl=1']
+	name[0,'WinNT3.1Work.zip','WinNT3.1WorkFloppy','WinNT3.5.zip','WinNT3.5ServFloppy.zip','WinNT3.51Serv.zip','WinNT3.51ServFloppy.zip','WinNT3.51Work.zip','WinNT3.51WorkFloppy.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		var()
+	else:
+		precedentvar()
+
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

@@ -29,9 +29,9 @@ def windows():
 	if choix==2:
 		windows2() # Windows 2.x -> Ok
 	if choix==3:
-		windows3()
+		windows3() # Windows 3.x -> Ok
 	if choix==4:
-		windows95()
+		windows95() # Windows 95 -> Ok
 	if choix==5:
 		windows98()
 	if choix==6:
@@ -123,6 +123,32 @@ def windows3(): #Windows 3.x
 		windows()
 	else:
 		windows3()
+def windows95(): #Windows 95
+	print("Choix de version")
+	ver=["1- Windows 95 RTM (Disquette)","2- Windows 95 RTM","3- Windows 95 OSR 1","4- Windows 95 OSR 2","5- Windows 95 OSR 2.1","6- Windows 95 OSR 2.5"]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?"))
+	if choix==1:
+		dl('https://www.dropbox.com/s/vlcxi2uuqr84331/Win95Floppy.zip?dl=1','Win95Floppy.zip')
+		windows()
+	if choix==2:
+		dl('https://www.dropbox.com/s/xue2u98suw3osgd/Win95.zip?dl=1','Win95.zip')
+		windows
+	if choix==3:
+		dl('https://www.dropbox.com/s/i59js5htmq64oy8/Win95OSR1.zip?dl=1','Win95OSR1.zip')
+		windows()
+	if choix==4:
+		dl('https://www.dropbox.com/s/1hru7q9uemt814q/Win95OSR2.zip?dl=1','Win95OSR2.zip')
+		windows()
+	if choix==5:
+		dl('https://www.dropbox.com/s/w73w3rftftogld9/Win95OSR2.1.zip?dl=1','Win95OSR2.1.zip')
+		windows()
+	if choix==6:
+		dl('https://www.dropbox.com/s/lzueklsi923yn19/Win95OSR2.5.zip?dl=1','Win95OSR2.5.zip')
+		windows()
+	else:
+		windows95()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

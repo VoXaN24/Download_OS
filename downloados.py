@@ -221,9 +221,9 @@ def winxphome():
 		winxphome()
 
 def winxpmc():
-	ver=[]
-	url=[0,]
-	name=[0,]
+	ver=["1- Windows XP Media Center 2004","1- Windows XP Media Center 2004"]
+	url=[0,'https://www.dropbox.com/s/27wnmay6gkfx4an/WinMCE2004.zip?dl=1','https://www.dropbox.com/s/9m8ifxjj7yhj6q4/WinMCE2005.zip?dl=1']
+	name=[0,'WinMCE2004.zip','WinMCE2005.zip']
 	for i in range(len(ver)):
 		print(ver[i])
 	choix=int(input("Votre choix ?\n"))

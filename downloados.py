@@ -201,7 +201,7 @@ def windowsxp():
 	if ch==4:
 		winxpstarter() #Ok
 	if ch==5:
-		winxptablet()
+		winxptablet() #Ok
 	if ch==6:
 		winxppos()
 	else:
@@ -249,6 +249,19 @@ def winxppro():
 		windows()
 	else:
 		winxppro()
+
+def winxptablet():
+	ver=["1- Windows XP TabletPC 2005","2- Windows XP TabletPC 2005 (VL)","3- Windows TabletPC SP1a"]
+	url=[0,'https://www.dropbox.com/s/45pd0oep1hbe4q9/WinXP_Tablet_PC_2005.zip?dl=1','https://www.dropbox.com/s/6v9odweptcnww3y/WinXP_Tablet_PC_2005_VL.zip?dl=1','https://www.dropbox.com/s/si6uv3uv7yautyy/WinXP_Tablet_PC_SP1a.zip?dl=1']
+	name=[0,'WinXP_Tablet_PC_2005.zip','WinXP_Tablet_PC_2005_VL.zip','WinXP_Tablet_PC_SP1a.zip']
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		winxptablet()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

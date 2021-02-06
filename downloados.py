@@ -189,12 +189,21 @@ def windowsnt4(): #Windows NT4.0
 
 def windowsxp():
 	ver=["1- Windows XP Home/Famille","2- Windows XP Media Center","3- Windows XP Professionel","4- Windows XP Starter","5- Windows XP Tablet PC","6- Windows POSReady 2009"]
-	
 	for i in range(len(ver)):
 		print(ver[i])
 	ch=int(input("Votre choix ?\n"))
 	if ch==1:
 		winxphome()
+	if ch==2:
+		winxpmc()
+	if ch==3:
+		winxppro()
+	if ch==4:
+		winxpstarter()
+	if ch==5:
+		winxptablet()
+	if ch==6:
+		winxppos()
 	else:
 		windowsxp()
 
@@ -210,6 +219,19 @@ def winxphome():
 		windows()
 	else:
 		winxphome()
+
+def winxpmc():
+	ver=[]
+	url=[0,]
+	name=[0,]
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		winxpmc()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

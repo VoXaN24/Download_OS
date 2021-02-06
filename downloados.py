@@ -193,11 +193,11 @@ def windowsxp():
 		print(ver[i])
 	ch=int(input("Votre choix ?\n"))
 	if ch==1:
-		winxphome()
+		winxphome() #Ok
 	if ch==2:
-		winxpmc()
+		winxpmc() #Ok
 	if ch==3:
-		winxppro()
+		winxppro() #Ok
 	if ch==4:
 		winxpstarter()
 	if ch==5:
@@ -232,6 +232,19 @@ def winxpmc():
 		windows()
 	else:
 		winxpmc()
+
+def winxppro():
+	ver=["1- Windows XP Pro N RTM","2- Windows XP Pro N RTM (VL)","3- Windows XP Pro N SP3","3- Windows XP Pro N SP3 (VL)","4- Windows XP Pro RMT","5- Windows XP Pro RMT (VL)","6- Windows XP Pro SP2","7- Windows XP Pro SP2 (VL)","8- Windows XP Pro SP3","9- Windows XP Pro SP3 (VL)","10- Windows XP Pro (x64 - EN)"]
+	url=[0,'https://www.dropbox.com/s/5n0fz01neak4nxk/WinXP_PRO_N_SP0.zip?dl=1','https://www.dropbox.com/s/587eq488716v3s0/WinXP_PRO_N_SP0_VL.zip?dl=1','https://www.dropbox.com/s/97fwh6lwwi9xp76/WinXP_PRO_N_SP3.zip?dl=1','https://www.dropbox.com/s/2v4g30vmziuv4h7/WinXP_PRO_N_SP3_VL.zip?dl=1','https://www.dropbox.com/s/c57a7slfzraal6s/WINXP_PRO_SP0.zip?dl=1','https://www.dropbox.com/s/hjauuy6l1bsvvy6/WINXP_PRO_SP0_VL.zip?dl=1','https://www.dropbox.com/s/rmafh9u6bikm818/WINXP_PRO_SP2.zip?dl=1','https://www.dropbox.com/s/pwhbfgwxo6pjgtc/WinXP_PRO_SP2_VL.zip?dl=1','https://www.dropbox.com/s/8s80nwm8irbqqgw/WinXP_PRO_SP3.zip?dl=1','https://www.dropbox.com/s/zdyxn4rfo3xwroh/WinXP_PRO_SP3_VL.zip?dl=1','https://www.dropbox.com/s/56oc4i935o3l2nn/WinXP_PRO_X64.zip?dl=1']
+	name=[0,'WinXP_PRO_N_SP0.zip','WinXP_PRO_N_SP0_VL.zip','WinXP_PRO_N_SP3.zip','WinXP_PRO_N_SP3_VL.zip','WINXP_PRO_SP0.zip','WINXP_PRO_SP0_VL.zip','WINXP_PRO_SP2.zip','WinXP_PRO_SP2_VL.zip','WinXP_PRO_SP3.zip','WinXP_PRO_SP3_VL.zip','WinXP_PRO_X64.zip']
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		winxppro()
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

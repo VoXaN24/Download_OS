@@ -199,7 +199,7 @@ def windowsxp():
 	if ch==3:
 		winxppro() #Ok
 	if ch==4:
-		winxpstarter()
+		winxpstarter() #Ok
 	if ch==5:
 		winxptablet()
 	if ch==6:
@@ -232,6 +232,10 @@ def winxpmc():
 		windows()
 	else:
 		winxpmc()
+
+def winxpstarter():
+	dl('https://www.dropbox.com/s/no94bzfksqhvufh/WinXP_STARTER.zip?dl=1','WinXP_STARTER.zip')
+	windows()
 
 def winxppro():
 	ver=["1- Windows XP Pro N RTM","2- Windows XP Pro N RTM (VL)","3- Windows XP Pro N SP3","3- Windows XP Pro N SP3 (VL)","4- Windows XP Pro RMT","5- Windows XP Pro RMT (VL)","6- Windows XP Pro SP2","7- Windows XP Pro SP2 (VL)","8- Windows XP Pro SP3","9- Windows XP Pro SP3 (VL)","10- Windows XP Pro (x64 - EN)"]

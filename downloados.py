@@ -43,7 +43,7 @@ def windows():
 	if choix==9:
 		windowsme() # Windows ME -> Ok
 	if choix==10:
-		windowsxp()
+		windowsxp() # Windows XP -> Ok
 	if choix==11:
 		windowssrv2k3()
 	if choix==12:
@@ -203,7 +203,7 @@ def windowsxp():
 	if ch==5:
 		winxptablet() #Ok
 	if ch==6:
-		winxppos()
+		winxppos() #Ok
 	else:
 		windowsxp()
 
@@ -262,6 +262,11 @@ def winxptablet():
 		windows()
 	else:
 		winxptablet()
+
+def winxppos():
+	dl('https://www.dropbox.com/s/atkpt3v2kyaclpx/WinXP_POSReady2009.zip?dl=1','WinXP_POSReady2009.zip')
+	windows()
+
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

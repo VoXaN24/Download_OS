@@ -63,7 +63,7 @@ def windows():
 	if choix==19:
 		windows10()
 	if choix==20:
-		windowssrv2k16()
+		windowssrv2k16() #Windows Serveur 2k16 -> OK
 	if choix==21:
 		windowssrv2k19()
 	if choix==22:
@@ -187,7 +187,7 @@ def windowsnt4(): #Windows NT4.0
 	else:
 		windowsnt4()
 
-def windowsxp():
+def windowsxp(): #Windows XP
 	ver=["1- Windows XP Home/Famille","2- Windows XP Media Center","3- Windows XP Professionel","4- Windows XP Starter","5- Windows XP Tablet PC","6- Windows POSReady 2009"]
 	for i in range(len(ver)):
 		print(ver[i])
@@ -207,7 +207,7 @@ def windowsxp():
 	else:
 		windowsxp()
 
-def winxphome():
+def winxphome(): # Windows XP Home
 	ver=["1- Windows XP Home N","2- Windows XP Home N SP2","3- Windows XP Home N SP3","4- Windows XP Home RTM","5- Windows XP Home SP1","6- Windows XP Home SP2","7- Windows XP Home SP3"]
 	url=[0,'https://www.dropbox.com/s/9a79i6rzb8yw2t3/WinXP_Home_N_SP0.zip?dl=1','https://www.dropbox.com/s/uubff062srqr7up/WinXP_Home_N_SP2.zip?dl=1','https://www.dropbox.com/s/r3loerq4odvuz9t/WinXP_Home_N_SP3.zip?dl=1','https://www.dropbox.com/s/739amnqspx9a3gd/WinXP_Home_SP0.zip?dl=1','https://www.dropbox.com/s/9qxc4etvva6cnpn/WinXP_Home_SP1.zip?dl=1','https://www.dropbox.com/s/gmq6ltwn1t4q674/WinXP_Home_SP2.zip?dl=1','https://www.dropbox.com/s/pk3fr6hduxn8g8t/WinXP_Home_SP3.zip?dl=1']
 	name=[0,'WinXP_Home_N_SP0.zip','WinXP_Home_N_SP2.zip','WinXP_Home_N_SP3.zip','WinXP_Home_SP0.zip','WinXP_Home_SP1.zip','WinXP_Home_SP2.zip','WinXP_Home_SP3.zip']
@@ -220,7 +220,7 @@ def winxphome():
 	else:
 		winxphome()
 
-def winxpmc():
+def winxpmc(): #Windows XP Mediacenter
 	ver=["1- Windows XP Media Center 2004","1- Windows XP Media Center 2004"]
 	url=[0,'https://www.dropbox.com/s/27wnmay6gkfx4an/WinMCE2004.zip?dl=1','https://www.dropbox.com/s/9m8ifxjj7yhj6q4/WinMCE2005.zip?dl=1']
 	name=[0,'WinMCE2004.zip','WinMCE2005.zip']
@@ -233,11 +233,11 @@ def winxpmc():
 	else:
 		winxpmc()
 
-def winxpstarter():
+def winxpstarter(): #Windows XP Starter
 	dl('https://www.dropbox.com/s/no94bzfksqhvufh/WinXP_STARTER.zip?dl=1','WinXP_STARTER.zip')
 	windows()
 
-def winxppro():
+def winxppro(): #Windows XP Pro
 	ver=["1- Windows XP Pro N RTM","2- Windows XP Pro N RTM (VL)","3- Windows XP Pro N SP3","3- Windows XP Pro N SP3 (VL)","4- Windows XP Pro RMT","5- Windows XP Pro RMT (VL)","6- Windows XP Pro SP2","7- Windows XP Pro SP2 (VL)","8- Windows XP Pro SP3","9- Windows XP Pro SP3 (VL)","10- Windows XP Pro (x64 - EN)"]
 	url=[0,'https://www.dropbox.com/s/5n0fz01neak4nxk/WinXP_PRO_N_SP0.zip?dl=1','https://www.dropbox.com/s/587eq488716v3s0/WinXP_PRO_N_SP0_VL.zip?dl=1','https://www.dropbox.com/s/97fwh6lwwi9xp76/WinXP_PRO_N_SP3.zip?dl=1','https://www.dropbox.com/s/2v4g30vmziuv4h7/WinXP_PRO_N_SP3_VL.zip?dl=1','https://www.dropbox.com/s/c57a7slfzraal6s/WINXP_PRO_SP0.zip?dl=1','https://www.dropbox.com/s/hjauuy6l1bsvvy6/WINXP_PRO_SP0_VL.zip?dl=1','https://www.dropbox.com/s/rmafh9u6bikm818/WINXP_PRO_SP2.zip?dl=1','https://www.dropbox.com/s/pwhbfgwxo6pjgtc/WinXP_PRO_SP2_VL.zip?dl=1','https://www.dropbox.com/s/8s80nwm8irbqqgw/WinXP_PRO_SP3.zip?dl=1','https://www.dropbox.com/s/zdyxn4rfo3xwroh/WinXP_PRO_SP3_VL.zip?dl=1','https://www.dropbox.com/s/56oc4i935o3l2nn/WinXP_PRO_X64.zip?dl=1']
 	name=[0,'WinXP_PRO_N_SP0.zip','WinXP_PRO_N_SP0_VL.zip','WinXP_PRO_N_SP3.zip','WinXP_PRO_N_SP3_VL.zip','WINXP_PRO_SP0.zip','WINXP_PRO_SP0_VL.zip','WINXP_PRO_SP2.zip','WinXP_PRO_SP2_VL.zip','WinXP_PRO_SP3.zip','WinXP_PRO_SP3_VL.zip','WinXP_PRO_X64.zip']
@@ -250,7 +250,7 @@ def winxppro():
 	else:
 		winxppro()
 
-def winxptablet():
+def winxptablet(): #Windows XP TabletPC
 	ver=["1- Windows XP TabletPC 2005","2- Windows XP TabletPC 2005 (VL)","3- Windows TabletPC SP1a"]
 	url=[0,'https://www.dropbox.com/s/45pd0oep1hbe4q9/WinXP_Tablet_PC_2005.zip?dl=1','https://www.dropbox.com/s/6v9odweptcnww3y/WinXP_Tablet_PC_2005_VL.zip?dl=1','https://www.dropbox.com/s/si6uv3uv7yautyy/WinXP_Tablet_PC_SP1a.zip?dl=1']
 	name=[0,'WinXP_Tablet_PC_2005.zip','WinXP_Tablet_PC_2005_VL.zip','WinXP_Tablet_PC_SP1a.zip']
@@ -263,9 +263,19 @@ def winxptablet():
 	else:
 		winxptablet()
 
-def winxppos():
+def winxppos(): #Windows POSReady 2009
 	dl('https://www.dropbox.com/s/atkpt3v2kyaclpx/WinXP_POSReady2009.zip?dl=1','WinXP_POSReady2009.zip')
 	windows()
+
+def windowssrv2k16(): #Windows serveur 2016
+	ver=["1- Windows Serveur 2016", "2- Windows Serveur 2016 Essential"]
+	url=[0,'https://www.dropbox.com/s/iivxa81nia67p7d/WinSrv2k16_x64.ISO?dl=1','https://www.dropbox.com/s/m6s1p6i78kdthdr/WinSrv2k16_Essential_x64.ISO?dl=1']
+	name=[0,'WinSrv2k16_x64.iso','WinSrv2k16_Essential_x64.iso']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		windowssrv2k16()
 
 
 def dl(url,filename):

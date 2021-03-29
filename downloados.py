@@ -45,7 +45,7 @@ def windows():
 	if choix==10:
 		windowsxp() # Windows XP -> Ok
 	if choix==11:
-		windowssrv2k3()
+		windowssrv2k3() # Windows Server 2k03 -> Ok
 	if choix==12:
 		windowsvista()
 	if choix==13:
@@ -65,7 +65,7 @@ def windows():
 	if choix==20:
 		windowssrv2k16() #Windows Serveur 2k16 -> OK
 	if choix==21:
-		windowssrv2k19()
+		windowssrv2k19() #Windows Server 2k19 -> Ok
 	if choix==22:
 		main()
 	if choix==23:
@@ -276,6 +276,32 @@ def windowssrv2k16(): #Windows serveur 2016
 		windows()
 	else:
 		windowssrv2k16()
+
+def windowssrv2k19():
+	ver=['1- Windows Serveur 2019 Essential', '2- Windows Serveur 2019']
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url=[0, 'https://www.dropbox.com/s/7891ue2ta220cgr/WinSrv2k19_Essential_x64.iso?dl=1', 'https://www.dropbox.com/s/f7tvr4yrdpzrrob/WinSrv2k19_x64.iso?dl=1']
+	name=[0,'WinSrv2k19_Essential_x64.iso', 'WinSrv2k19_x64.iso']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		windowssrv2k19()
+
+def windowssrv2k3():
+	ver=['1- Windows Serveur 2003 version datacenter (64 bits)', '2- Windows Serveur 2003 version datacenter (EN) (32 bits) (Licence en Volume)', '3- Windows Serveur 2003 version datacenter (EN) (64 bits) (Licence en Volume)', '4- Windows Serveur 2003 version Entreprise (32 bits)', '5- Windows Serveur 2003 version Entreprise (EN) (32 bits) (Licence en Volume)', '6- Windows Serveur 2003 version Entreprise (EN) (64 bits) (Licence en Volume)', '7- Windows Serveur 2003 version Standard (EN) (32 bits) (Licence en Volume)', '8- Windows Serveur 2003 version Standard (EN) (64 bits) (Licence en Volume)', '9- Windows Serveur 2003 version Standard (32 bits)', '10- Windows Serveur 2003 version Web (EN) (32 bits)']
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url=[0,'https://www.dropbox.com/s/rryatekd5bopjl2/WinSrv2k3_Datacenter_R2_FR_64Bit.zip?dl=1', 'https://www.dropbox.com/s/w6eot5z5vt4vmkz/WinSrv2k3_Datacenter_R2_VL_EN_32Bit.zip?dl=1', 'https://www.dropbox.com/s/zy3jzr0672t32yc/WinSrv2k3_Datacenter_R2_VL_EN_64Bit.zip?dl=1', 'https://www.dropbox.com/s/nbvw96yn57kpqru/WinSrv2k3_Entreprise_R2_FR_32Bit.zip?dl=1', 'https://www.dropbox.com/s/79uwb71o9qn8x7q/WinSrv2k3_Entreprise_R2_VL_EN_32Bit.zip?dl=1', 'https://www.dropbox.com/s/2dmp35imov1kmud/WinSrv2k3_Entreprise_R2_VL_EN_64Bit.zip?dl=1', 'https://www.dropbox.com/s/rk06hskpeedwmjv/WinSrv2k3_Standard_R2_VL_EN_32Bit.zip?dl=1', 'https://www.dropbox.com/s/s4x6iorjvuj6ql4/WinSrv2k3_Standard_R2_VL_EN_64Bit.zip?dl=1', 'https://www.dropbox.com/s/c4tg8za6iu9nu0q/WinSrv2k3_Standard_R2_FR_32Bit.zip?dl=1', 'https://www.dropbox.com/s/zwi2g3y273p6oox/WinSrv2k3_Web_Edition_EN.zip?dl=1']
+	name=[0, 'WinSrv2k3_Datacenter_R2_FR_64Bit.zip', 'WinSrv2k3_Datacenter_R2_VL_EN_32Bit.zip', 'WinSrv2k3_Datacenter_R2_VL_EN_64Bit.zip', 'WinSrv2k3_Entreprise_R2_FR_32Bit.zip', 'WinSrv2k3_Entreprise_R2_VL_EN_32Bit.zip', 'WinSrv2k3_Entreprise_R2_VL_EN_64Bit.zip', 'WinSrv2k3_Standard_R2_VL_EN_32Bit.zip', 'WinSrv2k3_Standard_R2_VL_EN_64Bit.zip', 'WinSrv2k3_Standard_R2_FR_32Bit.zip', 'WinSrv2k3_Web_Edition_EN.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		windowssrv2k3()
 
 
 def dl(url,filename):

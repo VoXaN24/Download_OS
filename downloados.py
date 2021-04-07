@@ -316,6 +316,19 @@ def windowsvista(): #Windows Vista
 	else:
 		windowsvista()
 
+def windows7():
+	ver=['1- Windows 7 SP1 (32Bit)', '2- Windows 7 SP1 (64Bit)']
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url=[0,'https://www.dropbox.com/s/uz2uhfhoakzst6c/Win7_SP1_32bit.zip?dl=1', 'https://www.dropbox.com/s/t3ig13kywss8p1z/Win7_SP1_64bit.zip?dl=1']
+	name=[0, 'Win7_SP1_32bit.zip', 'Win7_SP1_64bit.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		windows7()
+
 
 def dl(url,filename):
 	print("Démarrage du téléchargement")

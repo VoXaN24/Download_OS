@@ -49,9 +49,9 @@ def windows():
 	if choix==12:
 		windowsvista() #Windows Vista -> Ok
 	if choix==13:
-		windows7()
+		windows7() #Windows 7 -> Ok
 	if choix==14:
-		windowssrv2k8()
+		windowssrv2k8() #Windows Server 2008 -> Ok
 	if choix==15:
 		windows8()
 	if choix==16:
@@ -316,7 +316,7 @@ def windowsvista(): #Windows Vista
 	else:
 		windowsvista()
 
-def windows7():
+def windows7(): #Windows 7
 	ver=['1- Windows 7 SP1 (32Bit)', '2- Windows 7 SP1 (64Bit)']
 	for i in range(len(ver)):
 		print(ver[i])
@@ -328,6 +328,19 @@ def windows7():
 		windows()
 	else:
 		windows7()
+
+def windowssrv2k8(): #Windows Serveur 2k8
+	ver=['1- Windows Serveur 2008 Standard (32bit)', '2- Windows Serveur 2008 Standard (64bit)', '3- Windows Serveur 2008 R2 (64Bit)']
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url=[0,'https://www.dropbox.com/s/b8g0thgwste92d2/Win2k8_Strd_32Bit.zip?dl=1', 'https://www.dropbox.com/s/5hhau1tjcyriy1s/Win2k8_Strd_64Bit.zip?dl=1', 'https://www.dropbox.com/s/vi5etc34eid64t7/Win2k8_R2_64Bit.zip?dl=1']
+	name=[0,'Win2k8_Strd_32Bit.zip', 'Win2k8_Strd_64Bit.zip', 'Win2k8_R2_64Bit.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		windowssrv2k8()
 
 
 def dl(url,filename):

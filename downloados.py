@@ -47,7 +47,7 @@ def windows():
 	if choix==11:
 		windowssrv2k3() # Windows Server 2k03 -> Ok
 	if choix==12:
-		windowsvista()
+		windowsvista() #Windows Vista -> Ok
 	if choix==13:
 		windows7()
 	if choix==14:
@@ -277,7 +277,7 @@ def windowssrv2k16(): #Windows serveur 2016
 	else:
 		windowssrv2k16()
 
-def windowssrv2k19():
+def windowssrv2k19(): #Windows Server 2019
 	ver=['1- Windows Serveur 2019 Essential', '2- Windows Serveur 2019']
 	for i in range(len(ver)):
 		print(ver[i])
@@ -290,7 +290,7 @@ def windowssrv2k19():
 	else:
 		windowssrv2k19()
 
-def windowssrv2k3():
+def windowssrv2k3(): #Windows Server 2003
 	ver=['1- Windows Serveur 2003 version datacenter (64 bits)', '2- Windows Serveur 2003 version datacenter (EN) (32 bits) (Licence en Volume)', '3- Windows Serveur 2003 version datacenter (EN) (64 bits) (Licence en Volume)', '4- Windows Serveur 2003 version Entreprise (32 bits)', '5- Windows Serveur 2003 version Entreprise (EN) (32 bits) (Licence en Volume)', '6- Windows Serveur 2003 version Entreprise (EN) (64 bits) (Licence en Volume)', '7- Windows Serveur 2003 version Standard (EN) (32 bits) (Licence en Volume)', '8- Windows Serveur 2003 version Standard (EN) (64 bits) (Licence en Volume)', '9- Windows Serveur 2003 version Standard (32 bits)', '10- Windows Serveur 2003 version Web (EN) (32 bits)']
 	for i in range(len(ver)):
 		print(ver[i])
@@ -302,6 +302,19 @@ def windowssrv2k3():
 		windows()
 	else:
 		windowssrv2k3()
+
+def windowsvista(): #Windows Vista
+	ver=['1- Windows Vista SP1 (32Bit)', '2- Windows Vista SP1 (64Bit)', '3- Windows Vista SP2 (32Bit)', '4- Windows Vista SP1 (64Bit)']
+	for i in range(len(ver)):
+		print(ver[i])
+	choix=int(input("Votre choix ?\n"))
+	url=[0, 'https://www.dropbox.com/s/vpz6vta64f22a2x/WinVista_SP1_32bit.zip?dl=1', 'https://www.dropbox.com/s/k8wrtu2mfc20mll/WinVista_SP1_64bit.zip?dl=1', 'https://www.dropbox.com/s/h4qdee0pavqx5tc/WinVista_SP2_32bit.zip?dl=1', 'https://www.dropbox.com/s/us8fvbpqpz5kgvg/WinVista_SP2_64bit.zip?dl=1']
+	name=['WinVista_SP1_32bit.zip', 'WinVista_SP1_64bit.zip', 'WinVista_SP2_32bit.zip', 'WinVista_SP2_64bit.zip']
+	if choix <= len(ver) - 1 and choix != 0:
+		dl(url[choix], name[choix])
+		windows()
+	else:
+		windowsvista()
 
 
 def dl(url,filename):

@@ -5,4 +5,6 @@ pip3 install wget or pip install wget module
 
 Language : French (only for the moment)
 
-It's based in the PCArchive.icu database (Another of my project :D )
+A rework of the script can be made ASAP (To be in accord to PCArchive) - ETA : None
+
+It's based in the PCArchive.eu.org database (Another of my project :D )
